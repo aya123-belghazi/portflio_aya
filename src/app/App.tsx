@@ -6,20 +6,19 @@ import { Moon, Sun, Github, Linkedin, Mail, ExternalLink, Code2, ChevronDown, Te
 type Theme = "light" | "dark";
 
 // ── Tech Stack Data ────────────────────────────────────────────────────────
+
 const techStack = [
   { name: "React", icon: "⚛", color: "text-cyan-500", bg: "bg-cyan-50 dark:bg-cyan-950/40", border: "border-cyan-200 dark:border-cyan-800" },
   { name: "Redux", icon: "⬡", color: "text-purple-500", bg: "bg-purple-50 dark:bg-purple-950/40", border: "border-purple-200 dark:border-purple-800" },
-  { name: "Node.js", icon: "⬢", color: "text-green-600", bg: "bg-green-50 dark:bg-green-950/40", border: "border-green-200 dark:border-green-800" },
-  { name: "Express", icon: "⚙️", color: "text-slate-500", bg: "bg-slate-50 dark:bg-slate-950/40", border: "border-slate-200 dark:border-slate-800" },
   { name: "Tailwind", icon: "◈", color: "text-teal-500", bg: "bg-teal-50 dark:bg-teal-950/40", border: "border-teal-200 dark:border-teal-800" },
-  { name: "PHP", icon: "🐘", color: "text-indigo-500", bg: "bg-indigo-50 dark:bg-indigo-950/40", border: "border-indigo-200 dark:border-indigo-800" },
+  { name: "Node.js", icon: "⬡", color: "text-green-500", bg: "bg-green-50 dark:bg-green-950/40", border: "border-green-200 dark:border-green-800" },
   { name: "Laravel", icon: "◉", color: "text-red-500", bg: "bg-red-50 dark:bg-red-950/40", border: "border-red-200 dark:border-red-800" },
-  { name: "MySQL", icon: "🛢️", color: "text-orange-500", bg: "bg-orange-50 dark:bg-orange-950/40", border: "border-orange-200 dark:border-orange-800" },
-  { name: "MongoDB", icon: "🍃", color: "text-green-500", bg: "bg-green-50 dark:bg-green-950/40", border: "border-green-200 dark:border-green-800" },
-  { name: "Docker", icon: "🐳", color: "text-blue-500", bg: "bg-blue-50 dark:bg-blue-950/40", border: "border-blue-200 dark:border-blue-800" },
   { name: "WordPress", icon: "◎", color: "text-blue-500", bg: "bg-blue-50 dark:bg-blue-950/40", border: "border-blue-200 dark:border-blue-800" },
+  { name: "WooCommerce", icon: "⬢", color: "text-violet-500", bg: "bg-violet-50 dark:bg-violet-950/40", border: "border-violet-200 dark:border-violet-800" },
 ];
+
 // ── Projects Data ──────────────────────────────────────────────────────────
+
 const projects = [
   {
     title: "AyAuto",
@@ -336,9 +335,11 @@ export default function App() {
         </div>
       </section>
 
-    {/* ── About & Experience ──────────────────────────────────────────── */}
+      {/* ── About & Experience ──────────────────────────────────────────── */}
       <section id="about" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
+
+          {/* Section label */}
           <div className="mb-16">
             <p className={`font-mono text-xs uppercase tracking-widest mb-3 ${dark ? "text-blue-400" : "text-blue-600"}`} style={{ fontFamily: "'JetBrains Mono', monospace" }}>
               01 — À propos
@@ -349,18 +350,21 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-5 gap-12 items-start">
+
+            {/* Bio text */}
             <div className="md:col-span-3 space-y-6">
               <p className={`text-base leading-relaxed ${dark ? "text-slate-300" : "text-slate-600"}`}>
-                Développeuse Full Stack spécialisée dans la création de solutions web robustes et évolutives. Experte de l'écosystème <span className={`font-semibold ${dark ? "text-slate-100" : "text-slate-900"}`}>React.js et Laravel</span>, je transforme des concepts complexes en interfaces intuitives, en garantissant un code propre et des performances optimales du back-end jusqu'à l'expérience utilisateur.
+                Étudiante en <span className={`font-semibold ${dark ? "text-slate-100" : "text-slate-900"}`}>Génie Informatique à l'ISMONTIC (Tanger)</span>, je me spécialise dans le développement web full stack avec un focus sur React pour le front-end et Laravel pour le back-end.
               </p>
               <p className={`text-base leading-relaxed ${dark ? "text-slate-300" : "text-slate-600"}`}>
-                Mon stage professionnel chez <span className={`font-semibold ${dark ? "text-slate-100" : "text-slate-900"}`}>2M Crafters</span> m'a permis d'intervenir concrètement sur des architectures SaaS en environnement Agile. De la conception de bases de données relationnelles à l'intégration de tableaux de bord interactifs, j'ai acquis une solide expérience pratique. Habituée à travailler en équipe, je suis immédiatement disponible pour apporter ma rigueur et mon dynamisme à de nouveaux projets innovants.
+                Mon stage professionnel chez <span className={`font-semibold ${dark ? "text-slate-100" : "text-slate-900"}`}>Logidesk</span> m'a permis de travailler sur des projets réels en environnement agile — de la conception à la livraison, en passant par la gestion de version et la coordination d'équipe.
               </p>
 
+              {/* Timeline */}
               <div className="mt-8 space-y-4">
                 {[
-                  { year: "Avril – Mai 2026", role: "Stagiaire Développeuse Full Stack", org: "2M Crafters (Télétravail)", color: "bg-blue-500" },
-                  { year: "2024 – 2026", role: "Technicienne Spécialisée Full Stack", org: "ISMONTIC, Tanger", color: "bg-violet-500" },
+                  { year: "2024–prés.", role: "Étudiante en GI", org: "ISMONTIC, Tanger", color: "bg-blue-500" },
+                  { year: "2024", role: "Stagiaire Développeuse", org: "Logidesk", color: "bg-violet-500" },
                 ].map((item) => (
                   <div key={item.role} className={`flex gap-4 items-start p-4 rounded-xl border ${dark ? "border-[#2a2f42] bg-[#1a1d27]" : "border-slate-100 bg-white"}`}>
                     <div className={`mt-0.5 w-2.5 h-2.5 rounded-full flex-shrink-0 ${item.color}`} />
@@ -376,9 +380,13 @@ export default function App() {
               </div>
             </div>
 
+            {/* Methodology cards */}
             <div className="md:col-span-2 space-y-4">
               {methodCards.map((card) => (
-                <div key={card.title} className={`p-5 rounded-xl border transition-all hover:shadow-md ${dark ? "border-[#2a2f42] bg-[#1a1d27] hover:border-blue-800/60" : "border-slate-100 bg-white hover:border-blue-200"}`}>
+                <div
+                  key={card.title}
+                  className={`p-5 rounded-xl border transition-all hover:shadow-md ${dark ? "border-[#2a2f42] bg-[#1a1d27] hover:border-blue-800/60" : "border-slate-100 bg-white hover:border-blue-200"}`}
+                >
                   <div className={`w-9 h-9 rounded-lg flex items-center justify-center mb-3 ${card.bg} ${card.color}`}>
                     {card.icon}
                   </div>
@@ -425,7 +433,7 @@ export default function App() {
             <p className={`w-full text-xs uppercase tracking-widest mb-2 font-mono ${dark ? "text-slate-600" : "text-slate-400"}`} style={{ fontFamily: "'JetBrains Mono', monospace" }}>
               Outils & Environnement
             </p>
-            {["Git & GitHub", "VS Code", "Figma", "Postman", "MySQL", "REST API", "Jira"].map((tool) => (
+            {["Git & GitHub", "VS Code", "Figma", "Postman", "MySQL", "REST API", "Jira", "Linux"].map((tool) => (
               <span
                 key={tool}
                 className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-mono border ${dark ? "bg-[#0f1117] border-[#2a2f42] text-slate-400" : "bg-slate-50 border-slate-200 text-slate-600"}`}
